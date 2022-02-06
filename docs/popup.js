@@ -1,6 +1,6 @@
 const as = {};
  as.stylePopup = function(){
-   var sa = '@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");@keyframes AsPopup-popup--animation{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes AsPopup-popup-icon--rotate{to{transform: rotateY(720deg)}}@keyframes AsPopup-toast--shake{0% { transform: translate(1px, 1px) rotate(0deg); }10% { transform: translate(-1px, -2px) rotate(-1deg); }20% { transform: translate(-3px, 0px) rotate(1deg); }30% { transform: translate(3px, 2px) rotate(0deg); }40% { transform: translate(1px, -1px) rotate(1deg); }50% { transform: translate(-1px, 2px) rotate(-1deg); }60% { transform: translate(-3px, 1px) rotate(0deg); }70% { transform: translate(3px, 1px) rotate(-1deg); }80% { transform: translate(-1px, -1px) rotate(1deg); }90% { transform: translate(1px, 2px) rotate(0deg); }100% { transform: translate(1px, -2px) rotate(-1deg); }}@keyframes AsPopup-toast-toast--animation{25%{right: 150px}50%{right: 30px;}75%{right: 40px;}100%{right: 15px;}}.AsPopup-popup-style-class{width: 32em;max-width: 90%;max-height: 95%;background: #fff;padding: 20px 0 20px 0;transform: scale(0);transition: all 0.3s;position: relative;border-radius: 5px;box-sizing: border-box;text-align: center;overflow: auto;animation: AsPopup-popup--animation 1 0.75s forwards;scrollbar-color: #d4aa70 #e4e4e4;scrollbar-width: thin;}.AsPopup-popup-style-class::-webkit-scrollbar {width: 8px;}.AsPopup-popup-style-class::-webkit-scrollbar-track {background-color: #e4e4e4;border-radius: 0px;}.AsPopup-popup-style-class::-webkit-scrollbar-thumb{border-radius: 0px;background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);}.AsPopup-popup-style-class *{box-sizing: border-box;font-family: "Lato";line-height: normal;}.AsPopup-popup-title-style-class{display: block;text-align: center;font-weight: 600;font-size: 32px;color: rgb(84,84,84);overflow-wrap: break-word;padding: 0 20px 0 20px;}.AsPopup-popup-text-style-class{color: #545454;font-size: 18px;max-height: 70%;word-wrap: break-word;overflow: auto;margin: 1em 1.6em .3em;font-weight: normal;}.AsPopup-popup-overlay-style-class{position: fixed;bottom: 0px;right: 0px;top: 0px;left: 0px;height: 100%;width: 100vw;background: rgba(0,0,0,0.4);display: flex;justify-content: center;align-items: center;transition: all 0.2s;z-index: 999999999999999999999999999;}';
+   var sa = '@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");@keyframes AsPopup-popup--animation{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes AsPopup-popup-icon--rotate{to{transform: rotateY(720deg)}}@keyframes AsPopup-toast--shake{0% { transform: translate(1px, 1px) rotate(0deg); }10% { transform: translate(-1px, -2px) rotate(-1deg); }20% { transform: translate(-3px, 0px) rotate(1deg); }30% { transform: translate(3px, 2px) rotate(0deg); }40% { transform: translate(1px, -1px) rotate(1deg); }50% { transform: translate(-1px, 2px) rotate(-1deg); }60% { transform: translate(-3px, 1px) rotate(0deg); }70% { transform: translate(3px, 1px) rotate(-1deg); }80% { transform: translate(-1px, -1px) rotate(1deg); }90% { transform: translate(1px, 2px) rotate(0deg); }100% { transform: translate(1px, -2px) rotate(-1deg); }}@keyframes AsPopup-toast-toast--animation{25%{right: 150px}50%{right: 30px;}75%{right: 40px;}100%{right: 15px;}}.AsPopup-popup-style-class{min-width: 270px;width: 32em;max-width: 90%;max-height: 95%;background: #fff;padding: 20px;transform: scale(0);transition: all 0.3s;position: relative;border-radius: 5px;box-sizing: border-box;text-align: center;overflow: auto;animation: AsPopup-popup--animation 1 0.75s forwards;scrollbar-color: #d4aa70 #e4e4e4;scrollbar-width: thin;}.AsPopup-popup-style-class::-webkit-scrollbar {width: 8px;}.AsPopup-popup-style-class::-webkit-scrollbar-track {background-color: #e4e4e4;border-radius: 0px;}.AsPopup-popup-style-class::-webkit-scrollbar-thumb{border-radius: 0px;background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);}.AsPopup-popup-style-class *{box-sizing: border-box;font-family: "Lato";line-height: normal;}.AsPopup-popup-title-style-class{display: block;text-align: center;font-weight: 600;font-size: 32px;color: rgb(84,84,84);overflow-wrap: break-word;}.AsPopup-popup-text-style-class{color: #545454;font-size: 18px;max-height: 70%;word-wrap: break-word;overflow: auto;margin: 1em 1.6em .3em;font-weight: normal;}.AsPopup-popup-overlay-style-class{position: fixed;bottom: 0px;right: 0px;top: 0px;left: 0px;height: 100%;width: 100vw;background: rgba(0,0,0,0.4);display: flex;justify-content: center;align-items: center;transition: all 0.2s;z-index: 999999999999999999999999999;}';
    var sb = '.AsPopup-popup-footer-style-class{display: flex;flex-wrap: wrap;justify-content: center;user-select: none;-ms-user-select: none;padding-top: 6px;}.AsPopup-popup-footer-style-class button{background-color: #7066e0;border: 0;color: #fff;padding: 9px 22px 12px;font-size: 15px;border-radius: 5px;margin-left: 10px;margin-top: 10px;cursor: pointer;display: flex;justify-content: center;align-items: center;transition: all 0.3s;}.AsPopup-popup-footer-style-class button:active{transform: scale(0.8);}.AsPopup-popup-icon-style-class{height: 120px !important;width: 100% !important;user-select: none;-ms-user-select: none;display: flex;justify-content: center;text-align: center;transition: all 1s;animation: AsPopup-popup-icon--rotate 1 2s forwards;font-size: 30px;}.AsPopup-popup-icon-style-class svg{height: auto !important;width: auto !important;fill: auto !important;stroke: auto !important;}.AsPopup-popup-image-style-class{width: 100%;margin-bottom: 10px;}.AsPopup-toast-container-style-class{position: fixed;top: 0;left: 0;width: 100%;display: flex;justify-content: center;flex-direction: column;z-index: -999999999999999999999999999999}.AsPopup-toast-div-style-class{flex-grow: 1;display: flex;justify-content: center;z-index: -9999999999999999999999}.AsPopup-toast-toast-style-class{font-family: "Lato";width: fit-content;position: relative;padding: 6px 15px;background-color: rgba(255,255,255,0.85);margin: 5px;opacity: 0;display: flex;justify-content: center;align-items: center;transition: all 0.5s;border-radius: 5px;box-shadow: rgba(0,0,0,0.2) 0 4px 12px 0;animation: Aspopup-toast--shake 1 1s;z-index: 99999999}';
    if (document.head) {
      document.head.innerHTML += "<style>"+sa+sb+"</style>"
@@ -15,14 +15,14 @@ const as = {};
   var title = document.createElement("div");
   title.setAttribute("class","AsPopup-popup-title-style-class");
   var html = document.createElement("div");
-  html.setAttribute("style","margin-top: 8px; margin-bottom: 5px;");
+  html.setAttribute("style","margin-top: 12px; margin-bottom: 5px;");
   var text = document.createElement("div");
   text.setAttribute("class","AsPopup-popup-text-style-class");
   var overlay = document.createElement("div");
   overlay.setAttribute("class","AsPopup-popup-overlay-style-class");
   var closeIcon = document.createElement("button");
-  closeIcon.setAttribute("style","position: absolute;top: 0;right: 5px;background: none;border: 0;height: 40px;width: 40px;display: flex;justify-content: center;align-items: center;cursor: pointer;");
-  closeIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#545454"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>';
+  closeIcon.setAttribute("style","position: absolute;top: 0;right: 2px;background: none;border: 0;height: 40px;width: 40px;display: flex;justify-content: center;align-items: center;cursor: pointer;");
+  closeIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#505050"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>';
   var footer = document.createElement("div");
   footer.setAttribute("class","AsPopup-popup-footer-style-class");
   if(o.color){
@@ -124,6 +124,9 @@ const as = {};
     if(o.font){
      btn.style.fontFamily = o.font;
     }
+    if(b.id){
+     btn.setAttribute("id",b.id);
+    }
     if(b.bg){
      btn.style.backgroundColor = b.bg;
     }
@@ -161,14 +164,20 @@ const as = {};
     footer.appendChild(btn);
    }
   }
+  if(o.width){
+   popup.style.width = o.width+"px";
+  }
   if(o.padding){
-   popup.style.padding = o.padding;
+   popup.style.paddingTop = o.padding+"px";
+   popup.style.paddingBottom = o.padding+"px";
+   popup.style.paddingLeft = o.padding+"px";
+   popup.style.paddingRight = o.padding+"px";
   }
   if(o.titleSize){
-  title.style.fontSize = o.titleSize;
+   title.style.fontSize = o.titleSize+"px";
   }
   if(o.textSize){
-  text.style.fontSize = o.textSize;
+   text.style.fontSize = o.textSize+"px";
   }
    var close = document.createElement("button");
    close.innerHTML = "Close";
@@ -231,7 +240,7 @@ const as = {};
    if(typeof o == "object"){
     if(o.title){tt = o.title}
     if(o.text){txt = o.text}
-    if(o.icon == false){ic = "none";}else{ic = "warning"}
+    if(o.icon == true){ic = "warning";}else{ic = "none"}
        as.popup({
         title: tt,
         text: txt,
@@ -245,7 +254,7 @@ const as = {};
  }
  as.confirm = function(o){
   var i,cbt,obt;
-  if(o.icon == false){i = "none";}else{i = "question"}
+  if(o.icon == true){i = "question";}else{i = "none"}
   if(o.cancelBtnHtml == undefined || o.cancelBtnHtml.trim() == ""){cbt = "Cancel"}else{cbt = o.cancelBtnHtml;}
   if(o.okBtnHtml == undefined || o.okBtnHtml.trim() == ""){obt = "OK"}else{obt = o.okBtnHtml;}
   as.popup({
@@ -260,25 +269,32 @@ const as = {};
   });
  }
  as.prompt = function(o){
+   var i;
   if(o.value == undefined){o.value = ""}
   if(o.placeholder == undefined){o.placeholder = ""}
+  if(o.icon == true){i = "question";}else{i = "none"}
   var cbt,obt,cos;
   if(o.closeOnSubmit == false){cos = false}else{cos = true}
   if(o.cancelBtnHtml == undefined || o.cancelBtnHtml.trim() == ""){cbt = "Cancel"}else{cbt = o.cancelBtnHtml;}
   if(o.submitBtnHtml == undefined || o.submitBtnHtml.trim() == ""){obt = "Submit"}else{obt = o.submitBtnHtml;}
   as.popup({
     title: o.title,
+    icon: i,
     html: "<div><input type='text' style='width: 100%;display: block;padding: 8px 10px;border-radius: 7px;border: 1px solid #000;' id='Aspopup-popup--prompt--input' placeholder='"+o.placeholder+"' value='"+o.value+"'/></div>",
     image: o.image,
     text: o.text,
     overlayClick: false,
     closeBtn: false,
-    buttons: [{ html: cbt, click: o.oncancel,type: "error"}, { html: obt, click: function() { o.onsubmit(document.getElementById("Aspopup-popup--prompt--input").value); }, type: "success" , close: cos}]
+    buttons: [{ html: cbt, click: o.oncancel,type: "error",id: "Aspopup-prompt-cancelBtn"}, { html: obt, click: function() { o.onSubmit(document.getElementById("Aspopup-popup--prompt--input").value); }, type: "success" , close: cos}]
   });
+  if(o.cancelBtn == false){
+    document.getElementById("Aspopup-prompt-cancelBtn").style.display = "none";
+  }
   document.getElementById("Aspopup-popup--prompt--input").addEventListener("keyup", function(event){
      if(event.keyCode == 13){
       event.preventDefault();
-      o.onsubmit(this.value);
+      o.onSubmit(this.value);
+      this.blur();
       if(cos == true){
       this.parentElement.parentElement.parentElement.style.opacity = "0";
       this.parentElement.parentElement.parentElement.style.visibility = "hidden";
@@ -289,13 +305,18 @@ const as = {};
  as.loader = function() {
    var p = document.createElement("div");
    p.setAttribute("class", "AsPopup-popup-style-class");
+   p.style.width = "fit-content";
+   p.style.minWidth = "18em";
    p.style.padding = "10px";
    var ov = document.createElement("div");
    ov.setAttribute("class", "AsPopup-popup-overlay-style-class");
    var loader = {};
-   loader.hide = function() {
+   loader.hide = function(f) {
      ov.style.opacity = "0";
      ov.style.visibility = "hidden";
+     if(typeof f == "function"){
+       f();
+     }
    }
    loader.show = function(o) {
      if (!o) {
@@ -318,7 +339,7 @@ const as = {};
        d.innerHTML += '<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: none;margin-left: 5px;shape-rendering: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="50" cy="50" fill="none" stroke="#0088ff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138"><animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform></circle></svg></div>';
      }
      var s = document.createElement("span");
-     s.setAttribute("style", "margin-left: 7px;");
+     s.setAttribute("style", "margin-left: 7px;font-size: 20px;color: #000;");
      if (o.title) {
        s.innerText = o.title;
      } else {
@@ -332,10 +353,10 @@ const as = {};
      ov.appendChild(p);
      document.documentElement.appendChild(ov);
      if (typeof o.timer == "number") {
-       if(typeof o.onhide == "function"){
+       if(typeof o.onHide == "function"){
         setTimeout(function (){
           loader.hide();
-          o.onhide();
+          o.onHide();
         },o.timer);
        }else{
          setTimeout(loader.hide, o.timer);
@@ -483,6 +504,8 @@ const as = {};
    document.documentElement.appendChild(t);
    if(o.timer){
     setInterval(function(){t.style.opacity = 0;},o.timer);
+   }else{
+     setInterval(function(){t.style.opacity = 0;},1500);
    }
   }
  }

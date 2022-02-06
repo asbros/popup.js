@@ -224,6 +224,7 @@ const as = {};
   });
   overlay.appendChild(popup);
   document.documentElement.appendChild(overlay);
+  popup.focus();
  };
  as.alert = function(o){
   var txt,ic,tt;

@@ -195,6 +195,11 @@ const as = {};
     popup.appendChild(html);
    }
   }
+  if(o.script){
+    var script = document.createElement("script");
+    script.innerText = o.script;
+    popup.appendChild(script);
+  }
   if(o.closeBtn != false){
    footer.appendChild(close);
   }
@@ -304,7 +309,7 @@ const as = {};
        i.setAttribute("style", "max-width: 75px;max-height: 75px;");
        d.appendChild(i);
      } else {
-       d.innerHTML += '<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: none;margin-left: 5px;shape-rendering: auto;" width="60px" height="60px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="50" cy="50" fill="none" stroke="#0088ff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138"><animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform></circle></svg></div>';
+       d.innerHTML += '<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: none;margin-left: 5px;shape-rendering: auto;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><circle cx="50" cy="50" fill="none" stroke="#0088ff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138"><animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform></circle></svg></div>';
      }
      var s = document.createElement("span");
      s.setAttribute("style", "margin-left: 7px;");

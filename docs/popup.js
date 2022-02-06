@@ -217,6 +217,11 @@ const as = {};
   }
   });
   popup.appendChild(footer);
+  document.addEventListener("keyup", function(e){
+   if (e.keyCode == 27){
+     overlay.click();
+   }
+  });
   overlay.appendChild(popup);
   document.documentElement.appendChild(overlay);
  };

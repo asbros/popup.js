@@ -125,7 +125,7 @@ const as = {};
      img.style.width = o.imageWidth+"px";
    }
    if (o.imageAlt) {
-     img.setAttribute("alt",o.imageAlt);
+     img.setAttribute("alt", o.imageAlt);
    }
    popup.appendChild(img);
   }
@@ -210,9 +210,6 @@ const as = {};
   }
    var close = document.createElement("button");
    close.innerHTML = "Close";
-   if(o.closeBtnHtml){
-    close.innerHTML = o.closeBtnHtml;
-   }
    close.addEventListener("click", function(){
      overlay.style.opacity = "0";
      overlay.style.visibility = "hidden";

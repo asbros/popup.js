@@ -281,7 +281,7 @@ const as = {};
     image: o.image,
     closeBtn: false,
     icon: i,
-    buttons: [{ html: cbt, click: o.oncancel,type: "error"}, { html: obt, click: o.onconfirm,type: "success"}],
+    buttons: [{ html: cbt, click: o.onCancel,type: "error"}, { html: obt, click: o.onConfirm,type: "success"}],
     overlayClick: false
   });
  }
@@ -302,7 +302,7 @@ const as = {};
     text: o.text,
     overlayClick: false,
     closeBtn: false,
-    buttons: [{ html: cbt, click: o.oncancel,type: "error",id: "Aspopup-prompt-cancelBtn"}, { html: obt, click: function() { o.onSubmit(document.getElementById("Aspopup-popup--prompt--input").value); }, type: "success" , close: cos}]
+    buttons: [{ html: cbt, click: o.onCancel,type: "error",id: "Aspopup-prompt-cancelBtn"}, { html: obt, click: function() { o.onSubmit(document.getElementById("Aspopup-popup--prompt--input").value), function(){}}, type: "success" , close: cos}]
   });
   if(o.cancelBtn == false){
     document.getElementById("Aspopup-prompt-cancelBtn").style.display = "none";

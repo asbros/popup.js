@@ -391,22 +391,22 @@ const as = {};
    return loader;
  }
  as.toastTopLeftCont = document.createElement("div");
- as.toastTopLeftCont.setAttribute("style","position: fixed;top: 0;left: 0;max-width: 90%;");
+ as.toastTopLeftCont.setAttribute("style","position: fixed;top: 0;left: 0;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastTopLeftCont);
  as.toastTopCenterCont = document.createElement("div");
- as.toastTopCenterCont.setAttribute("style","position: fixed;top: 0;left: 50%;transform: translateX(-50%);width: fit-content;max-width: 90%;");
+ as.toastTopCenterCont.setAttribute("style","position: fixed;top: 0;left: 50%;transform: translateX(-50%);width: fit-content;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastTopCenterCont);
  as.toastTopRightCont = document.createElement("div");
- as.toastTopRightCont.setAttribute("style","position: fixed;top: 0;right: 0;max-width: 90%;");
+ as.toastTopRightCont.setAttribute("style","position: fixed;top: 0;right: 0;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastTopRightCont);
  as.toastBottomLeftCont = document.createElement("div");
- as.toastBottomLeftCont.setAttribute("style","position: fixed;bottom: 0;left: 0;max-width: 90%;");
+ as.toastBottomLeftCont.setAttribute("style","position: fixed;bottom: 0;left: 0;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastBottomLeftCont);
  as.toastBottomCenterCont = document.createElement("div");
- as.toastBottomCenterCont.setAttribute("style","position: fixed;bottom: 0;left: 50%;transform: translateX(-50%);width: fit-content;max-width: 90%;");
+ as.toastBottomCenterCont.setAttribute("style","position: fixed;bottom: 0;left: 50%;transform: translateX(-50%);width: fit-content;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastBottomCenterCont);
  as.toastBottomRightCont = document.createElement("div");
- as.toastBottomRightCont.setAttribute("style","position: fixed;bottom: 0;right: 0;max-width: 90%;");
+ as.toastBottomRightCont.setAttribute("style","position: fixed;bottom: 0;right: 0;max-width: 90%;z-index: 9999999999999999999999;");
  document.documentElement.appendChild(as.toastBottomRightCont);
  as.toaster = function(o){
   if(o.title){

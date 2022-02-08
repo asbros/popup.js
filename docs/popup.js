@@ -157,12 +157,6 @@ const as = {};
     if(b.bg){
      btn.style.backgroundColor = b.bg;
     }
-    if(b.width){
-     btn.style.width = b.width+"px";
-    }
-    if(b.height){
-     btn.style.height = b.height+"px";
-    }
     if(b.type){
      var bg;
      if(b.type == "success"){
@@ -197,10 +191,7 @@ const as = {};
    popup.style.width = o.width+"px";
   }
   if(o.padding){
-   popup.style.paddingTop = o.padding+"px";
-   popup.style.paddingBottom = o.padding+"px";
-   popup.style.paddingLeft = o.padding+"px";
-   popup.style.paddingRight = o.padding+"px";
+   popup.style.padding = o.padding;
   }
   if(o.titleSize){
    title.style.fontSize = o.titleSize+"px";

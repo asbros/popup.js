@@ -124,6 +124,9 @@ const as = {};
    if (o.imageWidth) {
      img.style.width = o.imageWidth+"px";
    }
+   if (o.imageAlt) {
+     img.setAttribute("alt",o.imageAlt);
+   }
    popup.appendChild(img);
   }
   if(o.title){

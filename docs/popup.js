@@ -204,7 +204,7 @@ const as = {};
    close.addEventListener("click", function(){
      overlay.style.opacity = "0";
      overlay.style.visibility = "hidden";
-     try{document.documentElement.removeChild(overlay);}catch(e){alert(e);};
+     try{document.documentElement.removeChild(overlay);}catch(e){};
    });
   if(o.closeIcon){
     closeIcon.addEventListener("click",function (){

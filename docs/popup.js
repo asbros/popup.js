@@ -325,7 +325,7 @@ const as = {};
    var p = document.createElement("div");
    p.setAttribute("class", "AsPopup-popup");
    p.style.width = "fit-content";
-   p.style.minWidth = "18em";
+   p.style.minWidth = "20em";
    p.style.padding = "10px";
    var ov = document.createElement("div");
    ov.setAttribute("class", "AsPopup-popup-overlay");

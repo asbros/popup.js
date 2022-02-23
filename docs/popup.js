@@ -216,13 +216,8 @@ const as = {};
     popup.style.paddingTop = "43px";
   }
   if(o.html){
-   if(typeof o.html == "object"){
-    html.innerHTML = o.html.outerHTML;
-    popup.appendChild(html);
-   }else{
     html.innerHTML = o.html;
     popup.appendChild(html);
-   }
   }
   if(o.script){
     var script = document.createElement("script");

@@ -103,7 +103,7 @@ const as = {};
       h = '';
       icon.style.display = "none";
     }else{
-      h = '<img src="'+img+'" style="margin-bottom: 5px;height: 120px;width: 120px;border-radius: 50%;"/>';
+      h = '<img src="'+img+'" style="margin-bottom: 5px;height: 120px;width: 120px;"/>';
     }
     icon.innerHTML = h;
     popup.appendChild(icon);

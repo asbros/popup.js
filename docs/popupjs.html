@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html dir='ltr' lang='en-GB' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+ <title>AS POPUP JS</title>
+ <meta content='rgb(15,37,110)' name='theme-color' />
+ <meta charset='utf-8' />
+ <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+ <link href='https://asbros.github.io/as.webmanifest' rel='manifest' />
+ <meta content='ie=edge' http-equiv='X-UA-Compatible' />
+ <link href='https://asbros.github.io/css/main.css' rel='stylesheet' />
+ <script src='https://asbros.github.io/popup.js/popup.js'></script>
+ <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-light.min.css' rel='stylesheet' />
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js'></script>
+ <style id='page-skin-1' type='text/css'>
+  <!--
+  html{
+  scroll-behavior: smooth;
+  }
+  *{
+  box-sizing: border-box;
+  }
+  body {
+  margin: 0;
+  background-color: #fff;
+  }
+  a, button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  }
+  #main{
+  }
+  #container {
+  height: 100%;
+  }
+  #header,
+  #menu-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  }
+  #menu-header{
+  background: #071a58;
+  padding: 10px;
+  }
+  #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: none;
+  justify-content: flex-end !important;
+  }
+  #menu {
+  position: fixed;
+  left: -290px;
+  top: 0;
+  height: 100%;
+  width: 270px;
+  background: linear-gradient(-20deg, rgba(9,46,168,1) 0%, rgba(15,37,110,1) 100%);
+  transition: all 0.5s;
+  z-index: 99999;
+  }
+  #menu.open {
+  left: 0;
+  }
+  #menu-body a,
+  #menu-body button {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 7px;
+  background: none;
+  border: 0;
+  }
+  .svg {
+  width: 28px;
+  height: 28px;
+  fill: #000;
+  stroke: #000;
+  }
+  .section {
+  padding: 25px;
+  padding-bottom: 0 !important;
+  }
+  .section-title {
+  font-weight: 500;
+  font-size: 30px;
+  color: #f00;
+  }
+  .section-description {
+  margin: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 7px !important;
+  }
+  .introduction-div{
+  width: 300px;
+  padding: 10px;
+  }
+  pre{
+  padding: 0 !important;
+  margin: 0 !important;
+  height: fit-content !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5px !important;
+  }
+  pre code{
+  background-color: rgba(0,0,0,0.05) !important;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-left: 5px solid #0072b3;
+  }
+  .try{
+  min-width: 100px;
+  width: fit-content;
+  padding: 8px 15px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: Poppins;
+  transition: all 0.2s;
+  margin: 5px;
+  }
+  /*   .try:active{
+  transform: scale(0.8);
+  }*/
+  @media only screen and (min-width: 1024px) {
+  #menu{position: fixed;left: 0;top: 0;filter: none !important;-webkit-filter: none !important;}
+  #main{margin-left: 270px;}
+  #header{position: fixed;left: 280px;}
+  #menu-close-btn, #header{display: none !important;}
+  .introduction-div{width: auto;margin-right: 80px !important;}
+  }
+  
+  -->
+ </style>
+ <script>
+  var uri = window.location.toString();
+  if (uri.indexOf("?m=1","?m=1") > 0) {var clean_uri = uri.substring(0, uri.indexOf("?m=1"));window.history.replaceState({}, document.title, clean_uri);}
+  if (uri.indexOf("&m=1","&m=1") > 0) {var clean_uri = uri.substring(0, uri.indexOf("&m=1"));window.history.replaceState({}, document.title, clean_uri);}
+ </script>
+ <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+ <meta name='google-adsense-platform-domain' content='blogspot.com' />
+
+ <script type="text/javascript" language="javascript">
+  // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === 'undefined') {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+ </script>
+
+
+</head>
+
+<body class='poppins-font'>
+ <div id='container'>
+  <div id='header'>
+   <button class='btn s-50' id='menu-open-btn' style='background: #dde5ff;'><svg class='svg'>
+     <use href='#menu-svg'></use>
+    </svg></button>
+  </div>
+  <div class='drop-shadow' id='menu'>
+   <div id='menu-header'>
+    <span class='josefin-font white f-20' style='flex: 1;margin-left: 8px;margin-top: 4px;'>AS POPUP JS</span>
+    <button class='btn circle s-40' id='menu-close-btn' style='background: none;'><svg class='svg' style='fill: #fff !important;stroke: #fff !important;'>
+      <use href='#close-svg'></use>
+     </svg></button>
+   </div>
+   <div id='menu-body'>
+    <a class='ripple' href='#introduction'>Introduction</a>
+    <a class='ripple' href='#installation'>Installation</a>
+    <a class='ripple' href='#popup'>Popup</a>
+    <a class='ripple' href='#toast'>Toast</a>
+    <a class='ripple' href='#loader'>Loader</a>
+    <a class='ripple' href='#alert'>Alert</a>
+    <a class='ripple' href='#confirm'>Confirm</a>
+    <a class='ripple' href='#prompt'>Prompt</a>
+    <a class='ripple' onclick='as.popup({title: "AS BROTHERS",titleSize: 25,font: "Josefin Sans",text: "Web Developers From India",icon: "https://avatars.githubusercontent.com/u/90209858?v=4",closeBtn: false,closeIcon: true,overlayClick: false});'>About Us</a>
+   </div>
+  </div>
+  <div id='main'>
+   <div class='section' id='introduction' style='background-color: #dde5ff;'>
+    <div class='section-title josefin-font'>AS POPUP JS</div>
+    <div class='section-description'>AsPopup.js is a javascript library for creating beautiful, customizable popups, alerts, confirms, prompts, toasts.</div><br />
+    <div style='display: flex;flex-wrap: wrap;justify-content: flex-start;'>
+     <div class='introduction-div'>
+      <div class='f-20 josefin-font'>Normal Alert</div>
+      <pre>
+              <code class='language-javascript'>alert("You clicked the button");</code><button class='btn bg-blue white try shadow' onclick='alert("You clicked the button")'>Try me!</button>
+              </pre>
+     </div>
+     <div class='introduction-div'>
+      <div class='f-20 josefin-font'>AsPopup.js Alert</div>
+      <pre>
+              <code class='language-javascript'>as.alert({
+  icon: true,
+  title: "You clicked the button"
+});</code><button class='btn bg-blue white try shadow' onclick='as.alert({icon: true,title:"You clicked the button"});'>Try me!</button>
+            </pre>
+     </div>
+    </div>
+   </div>
+   <div class='section' id='installation'>
+    <div class='section-title josefin-font'>😍 Installation</div>
+    <div class='section-description'>You can install it on your html page by adding a script tag with src given below.</div>
+    <pre><code class='language-html blue'>https://asbros.github.io/popup.js/popup.js</code></pre>
+   </div>
+   <div class='section' id='popup'>
+    <div class='section-title josefin-font'>Popup</div>
+    <div class='section-description'>You can create Popups.</div>
+    <pre><code class='language-javascript'>as.popup({
+  title: "You have passed the test !"
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with title with text.</div>
+    <pre><code class='language-javascript'>as.popup({
+  title: "Here's the title",
+  text: "This is text."
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description bold josefin-font f-20'>A popup with an icon, title, text.</div>
+    <div class='alert-blue pad-10'>You can use 5 predefined icons - <kbd>success</kbd>, <kbd>error</kbd>, <kbd>warning</kbd>, <kbd>info</kbd>, <kbd>question</kbd> OR you can put custom url.</div>
+    <pre><code class='language-javascript'>as.popup({
+  title: "Hurray !",
+  text: "You have passed the test.",
+  icon: "success"
+});</code></pre><button class='btn lg-green white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "success"});'>Try Success</button><button class='btn lg-red white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "error"});'>Try Error</button><button class='btn lg-yellow white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "warning"});'>Try Warning</button><button class='btn bg-blue white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "info"});'>Try Info</button><button class='btn bg-dark-pink white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "question"});'>Try Question</button><button class='btn lg-blue white try shadow' onclick='as.popup({title: "Hurray !",text: "You have passed the test.",icon: "https://avatars.githubusercontent.com/u/90209858?v=4"});'>Try Custom icon</button><br /><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with an big emoji.</div>
+    <pre><code class='language-javascript'>as.popup({
+  emoji: "😍",
+  title: "Smile Please",
+  text: "This is a popup with a big emoji."
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with custom image, custom width, height and image alt also.</div>
+    <pre><code class='language-javascript'>as.popup({
+  image: "https://placeholder.pics/svg/300x1500",
+  imageHeight: 1500,
+  imageWidth: 280,
+  imageAlt: "A tall image.",
+  title: "Here's the title",
+  text: "This is text."
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with html and javascript.</div>
+    <div id='html-example' style='display: flex;justify-content: center;width: 280px;'>
+     <div style='border: 1px solid #000;padding: 10px;text-align: center;margin-bottom: 8px;'>
+      <h1 style='color: red;'>HTML example</h1>
+      <p>My container has an id of "html-example"</p>
+     </div>
+    </div>
+    <div class='alert-blue pad-10'>You can give id of an element or you can write html inside html argument.</div>
+    <pre><code class='language-javascript'>as.popup({
+   html: document.getElementById("html-example"),
+   script: "//you can add script here.;"
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>Close button, Close Icon, Overlay Click</div>
+    <pre><code class='language-javascript'>as.popup({
+  closeBtn: false,
+  closeIcon: true,
+  overlayClick: false,
+  title: "Smile Please",
+  text: "This is a popup with a big emoji."
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with auto close timer.</div>
+    <pre><code class='language-javascript'>as.popup({
+  timer: 2000,
+  title: "Auto Close Popup",
+  text: "I will auto close after 2000 milliseconds.",
+  closeBtn: false,
+  overlayClick: false
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A custom positioned popup.</div>
+    <div class='alert-blue pad-10'>There are 6 positions you can give - <kbd>top-left</kbd>, <kbd>top-center</kbd>, <kbd>top-right</kbd>, <kbd>bottom-left</kbd>, <kbd>bottom-center</kbd>, <kbd>bottom-right</kbd></div>
+    <pre><code class='language-javascript'>as.popup({
+  icon: "success",
+  position: "top-center",
+  title: "Your changes have been saved.",
+  closeBtn: false,
+  timer: 2000
+});</code></pre><button class='btn lg-green white try shadow' onclick='as.popup({icon: "success",position: "top-left",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Top Left</button><button class='btn lg-red white try shadow' onclick='as.popup({icon: "success",position: "top-center",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Top Center</button><button class='btn lg-yellow white try shadow' onclick='as.popup({icon: "success",position: "top-right",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Top Right</button><button class='btn bg-blue white try shadow' onclick='as.popup({icon: "success",position: "bottom-left",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Bottom Left</button><button class='btn bg-dark-pink white try shadow' onclick='as.popup({icon: "success",position: "bottom-center",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Bottom Center</button><button class='btn lg-blue white try shadow' onclick='as.popup({icon: "success",position: "bottom-right",title: "Your changes have been saved.",closeBtn: false,timer: 2000});'>Bottom Right</button><br /><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with custom color, background, font, font-size, width, padding.</div>
+    <div class='alert-blue pad-10'>You can also use <kbd>color</kbd> for giving the same color for title & text.</div>
+    <pre><code class='language-javascript'>as.popup({
+  background: "url('https://images.unsplash.com/photo-1644307358784-c6c589c9dcac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=1100&q=60') center",
+  overlayBackground: "rgba(0,54,255,0.3)",
+  textColor: "white",
+  titleColor: " yellow",
+  font: "roboto",
+  titleSize: 30,
+  textSize: 20,
+  width: 250,
+  padding: "30px",
+  title: "Here's the title",
+  text: "This is text."
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>A popup with buttons.</div>
+    <pre><code class='language-javascript'>as.popup({
+  title: "Custom Buttons",
+  closeBtn: false,
+  buttons: [
+        {html: "Button"},
+        {html: "Success",type: "success"},
+        {html: "Error",type: "error"},
+        {html: "Warning",type: "warning"},
+        {html: "Info",type: "info"},
+        {html: "Question",type:"question"},
+        {html: "Dark",type: "dark"},
+        {html: "I cannot close Popup.",color: "white",bg: "chocolate",id: "btn-id",close: false}
+        ]
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='note-box pad-10'>
+     You have to create an object for each button in buttons array.<br />
+     <kbd>html</kbd>(string - html): Inner HTML of the button.<br />
+     <kbd>close</kbd>(boolean): If false, then the popup will not close after clicking the button. Default is true.<br />
+     <kbd>click</kbd>(function): function on click the button.<br />
+     <kbd>type</kbd>(string): There are 6 types for buttons :- "success", "error", "warning", "info", "question", "dark".<br />
+     <kbd>id</kbd>(string): id for the button.<br />
+     <kbd>bg</kbd>(string - color): background-color for the button.<br />
+     <kbd>color</kbd>(string - color): color: for the button.<br />
+    </div><br />
+    <div class='section-description josefin-font f-20 bold'>Buttons with click functions.</div>
+    <div class='alert-blue pad-7'>You can add icons in buttons by adding fontawesome or Bootstrap or Google icons in your page.</div>
+    <pre><code class='language-javascript'>as.popup({
+  title: "Buttons with click functions.",
+  closeBtn: false,
+  buttons: [
+        {html: "WhatsApp",type: "success",click: function(){window.open("https://whatsapp.com/","_blank");}},
+        {html: "Facebook",type: "info",click: function(){window.open("https://facebook.com/","_blank");}},
+      ]
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+   </div>
+   <div class='section' id='toast'>
+    <div class='section-title josefin-font'>Toast</div>
+    <div class='section-description'>You can create toasts.</div>
+    <div class='alert-red pad-10'>If you will not give timer, the toast will not disappear.</div>
+    <pre><code class='language-javascript'>as.toast({
+    title: "You have passed the test !",
+    timer: 2500
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>clickToClose toasts.</div>
+    <div class='alert-blue pad-10'>If clickToClose is true, then if you click the toast, it will disappear.</div>
+    <pre><code class='language-javascript'>as.toast({
+    clickToClose: true,
+    title: "You have passed the test !",
+    timer: 2500
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='section-description josefin-font f-20 bold'>Types of toasts.</div>
+    <div class='alert-blue pad-10'>There are 5 types of toasts except default - <kbd>success</kbd>, <kbd>error</kbd>, <kbd>warning</kbd>, <kbd>info</kbd>, <kbd>question</kbd></div>
+    <pre><code class='language-javascript'>as.toast({
+  type: "success",
+  title: "Your changes have been saved.",
+  timer: 2000
+});</code></pre><button class='btn lg-green white try shadow' onclick='as.toast({type: "success",title: "Your changes have been saved.",timer: 2000});'>Try Success</button><button class='btn lg-red white try shadow' onclick='as.toast({type: "error",title: "Your changes have been saved.",timer: 2000});'>Try Error</button><button class='btn lg-yellow white try shadow' onclick='as.toast({type: "warning",title: "Your changes have been saved.",timer: 2000});'>Try Warning</button><button class='btn bg-blue white try shadow' onclick='as.toast({type: "info",title: "Your changes have been saved.",timer: 2000});'>Try Info</button><button class='btn bg-dark-pink white try shadow' onclick='as.toast({type: "question",title: "Your changes have been saved.",timer: 2000});'>Try Question</button><br /><br />
+    <div class='section-description josefin-font f-20 bold'>A custom positioned toast.</div>
+    <div class='alert-blue pad-10'>There are 6 positions you can give - <kbd>top-left</kbd>, <kbd>top-center</kbd>, <kbd>top-right</kbd>, <kbd>bottom-left</kbd>, <kbd>bottom-center</kbd>, <kbd>bottom-right</kbd></div>
+    <pre><code class='language-javascript'>as.toast({
+  position: "top-center",
+  title: "Your changes have been saved.",
+  timer: 2000
+});</code></pre><button class='btn lg-green white try shadow' onclick='as.toast({position: "top-left",title: "Your changes have been saved.",timer: 2000});'>Top Left</button><button class='btn lg-red white try shadow' onclick='as.toast({position: "top-center",title: "Your changes have been saved.",timer: 2000});'>Top Center</button><button class='btn lg-yellow white try shadow' onclick='as.toast({position: "top-right",title: "Your changes have been saved.",timer: 2000});'>Top Right</button><button class='btn bg-blue white try shadow' onclick='as.toast({position: "bottom-left",title: "Your changes have been saved.",timer: 2000});'>Bottom Left</button><button class='btn bg-dark-pink white try shadow' onclick='as.toast({position: "bottom-center",title: "Your changes have been saved.",timer: 2000});'>Bottom Center</button><button class='btn lg-blue white try shadow' onclick='as.toast({position: "bottom-right",title: "Your changes have been saved.",timer: 2000});'>Bottom Right</button><br /><br />
+   </div>
+   <div class='section' id='loader'>
+    <div class='section-title josefin-font'>Loader</div>
+    <div class='section-description'>You can create loading popups.</div>
+    <pre><code class='language-javascript'>var loader = as.loader();
+loader.show({
+  timer: 3000,
+  onHide: function(){
+    as.toast({
+      title: "Loader disappeared.",
+      timer: 1500
+    });
+  }
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='note-box pad-10'>
+     <b>loader.show() arguments:-</b><br />
+     <kbd>title</kbd>(string): Title of the loader, default is "Loading..."<br />
+     <kbd>timer</kbd>(number): The time, after which the loader will disappear.
+     <kbd>onHide</kbd>(function): Function called after the timer ends.<br />
+     <kbd>icon</kbd>(string - image source): Image for Loader.<br />
+    </div><br />
+    <div class='section-description josefin-font f-20 bold'>loader.hide();</div>
+    <div class='alert-blue pad-10'>You can give function inside loader.hide(), that function will be executed when the loader disappears.</div>
+    <pre><code class='language-javascript'>var loader = as.loader();
+loader.show();
+fetch("https://api.github.com/users/google")
+.then(x => {return x.json();})
+.then(x => {
+   loader.hide(function (){
+     as.popup({
+      image: x.avatar_url,
+      title: x.name,
+      text: x.type
+     });
+   });
+});
+</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+   </div>
+   <div class='section' id='alert'>
+    <div class='section-title josefin-font'>Alert</div>
+    <div class='section-description'>You can create Popup Alerts.</div>
+    <pre><code class='language-javascript'>as.alert({
+  title: "Hello, I am title",
+  text: "I am text",
+  icon: true
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='alert-blue pad-10'>You can also give the value of icon false.</div><br />
+    <div class='section-description'>Alert with image url.</div>
+    <pre><code class='language-javascript'>as.alert({
+  title: "Hello, I am title",
+  text: "I am text",
+  icon: false,
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/OOjs_UI_icon_alert-warning.svg/1024px-OOjs_UI_icon_alert-warning.svg.png"
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+   </div>
+   <div class='section' id='confirm'>
+    <div class='section-title josefin-font'>Confirm</div>
+    <div class='section-description'>You can create Confirmation Popups.</div>
+    <pre><code class='language-javascript'>as.confirm({
+  title: "Are you a web developer ?",
+  text: 'Click "OK" to yes & click "Cancel" to no.',
+  icon: true,
+  onConfirm: function(){
+    as.popup({
+     icon: "success",
+     text: "Wow, this library will help you to build your website"
+    });
+  },
+  onCancel: function(){
+    as.popup({
+     icon: "error",
+     text: "Sorry, this library is only available for web."
+    });
+  }
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+    <div class='alert-blue pad-10'>You can also give the value of icon false.</div><br />
+    <div class='section-description'>Alert with image url.</div>
+    <pre><code class='language-javascript'>as.confirm({
+  title: "Is there a dog ?",
+  icon: false,
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMxBBstFvh6rsvxD8JgNAayA95dYmhv6ZZDQ&usqp=CAU",
+  okBtnHtml: "Yes",
+  cancelBtnHtml: "No",
+  onConfirm: function(){
+   as.toast({
+    title: "Correct",
+    timer: 2000,
+    type: "success"
+   });
+  },
+  onCancel: function(){
+   as.toast({
+    title: "Wrong",
+    timer: 2000,
+    type: "error"
+   });
+  }
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+   </div>
+   <div class='section' id='prompt'>
+    <div class='section-title josefin-font'>Prompt</div>
+    <div class='section-description'>You can create Prompt Popups.</div>
+    <pre><code class='language-javascript'>as.prompt({
+  title: "Welcome",
+  text: " Please enter your name",
+  icon: true
+});</code><button class='btn bg-blue white try shadow' onclick='var a = new Function(this.parentElement.getElementsByTagName("code")[0].innerText);a();'>Try me!</button></pre><br />
+   </div>
+  </div>
+ </div>
+ <svg style='display: none'>
+  <defs>
+   <symbol id='menu-svg' viewBox='0 0 24 24'>
+    <path d='M4 6h16M4 12h16M4 18h16' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+   <symbol id='close-svg' viewBox='0 0 24 24'>
+    <path d='M6 18L18 6M6 6l12 12' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+   <symbol id='play-svg' viewBox='0 0 30 30'>
+    <path d='M8.016 5.016l10.969 6.984-10.969 6.984v-13.969z'></path>
+   </symbol>
+   <symbol id='copy-svg' viewBox='0 0 24 24'>
+    <path d='M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+   <symbol id='right-svg' viewBox='0 0 24 24'>
+    <path d='M9 5l7 7-7 7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+   <symbol id='double-right-svg' viewBox='0 0 24 24'>
+    <path d='M13 5l7 7-7 7M5 5l7 7-7 7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+   <symbol id='info-svg' viewBox='0 0 24 24'>
+    <path d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+   </symbol>
+  </defs>
+ </svg>
+ <script>
+  function $(n) {
+    if (typeof n == "string") {
+          return document.querySelector(n);
+    } else {
+          return n;
+    }
+  }
+  
+  function event(n, e, f) {
+    $(n).addEventListener(e, f);
+  }
+  
+  function click(n, f) {
+   $(n).addEventListener("click", f);
+  }
+  
+  click("#menu-open-btn", function() {
+   $("#menu").classList.add("open");
+  });
+    
+  click("#menu-close-btn", function (){
+   $("#menu").classList.remove("open");
+  });
+    
+  window.onhashchange = function() {
+   $("#menu-close-btn").click();
+  }
+ </script>
+ <script>
+  hljs.highlightAll();
+ </script>
+ <script src='https://as.js.org/share/share.js'></script>
+ <script>
+  as_share.init()
+ </script>
+ <div class='no-items section' id='required'></div>
+ <!--Il est de votre ressort d\x27informer les visiteurs \xe0 propos des cookies utilis\xe9s et des donn\xe9es collect\xe9es sur votre blog. Blogger met \xe0 votre disposition une notification standard que vous pouvez personnaliser, remplacer ou afficher telle quelle sur votre blog. Rendez-vous sur http://www.blogger.com/go/cookiechoices pour obtenir de plus amples informations.-->
+ <script defer='' src='/js/cookienotice.js'></script>
+ <script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+        (window.cookieOptions && cookieOptions.msg) || 'Ce site utilise des cookies provenant de Google pour fournir ses services et analyser le trafic. Votre adresse\xa0IP et votre user-agent, ainsi que des statistiques relatives aux performances et \xe0 la s\xe9curit\xe9, sont transmis \xe0 Google afin d\x27assurer un service de qualit\xe9, de g\xe9n\xe9rer des statistiques d\x27utilisation, et de d\xe9tecter et de r\xe9soudre les probl\xe8mes d\x27abus.',
+        (window.cookieOptions && cookieOptions.close) || 'OK',
+        (window.cookieOptions && cookieOptions.learn) || 'En savoir plus',
+        (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+  });
+ </script>
+
+ <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/3737540651-widgets.js"></script>
+ <script type='text/javascript'>
+  window['__wavt'] = 'AOuZoY5U77B06qbEfucqeJtboxNLnxjVZA:1698860025401';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3381023116410725179','//as-popup-js.blogspot.com/','3381023116410725179');
+  _WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3381023116410725179', 'title': 'AS POPUP JS', 'url': 'https://as-popup-js.blogspot.com/', 'canonicalUrl': 'https://as-popup-js.blogspot.com/', 'homepageUrl': 'https://as-popup-js.blogspot.com/', 'searchUrl': 'https://as-popup-js.blogspot.com/search', 'canonicalHomepageUrl': 'https://as-popup-js.blogspot.com/', 'blogspotFaviconUrl': 'https://as-popup-js.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en-GB', 'localeUnderscoreDelimited': 'en_gb', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22AS POPUP JS - Atom\x22 href\x3d\x22https://as-popup-js.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22AS POPUP JS - RSS\x22 href\x3d\x22https://as-popup-js.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22AS POPUP JS - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/3381023116410725179/posts/default\x22 /\x3e\n', 'meTag': '\x3clink rel\x3d\x22me\x22 href\x3d\x22https://www.blogger.com/profile/14119495659275178860\x22 /\x3e\n', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': false, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/24dbc299a9c09ea1', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en_GB\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'index', 'pageName': '', 'pageTitle': 'AS POPUP JS'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard', 'ok': 'Ok', 'postLink': 'Post link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'AS POPUP JS', 'description': '', 'url': 'https://as-popup-js.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}, {'name': 'widgets', 'data': []}]);
+ </script>
+</body>
+
+</html>
